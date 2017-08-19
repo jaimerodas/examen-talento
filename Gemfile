@@ -30,6 +30,9 @@ gem 'jbuilder', '~> 2.5'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
+# Cosas para Recruiterbox
+gem 'rest-client', '~> 2'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
@@ -39,6 +42,7 @@ group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '~> 2.13'
+  gem 'webmock', '~> 3'
   gem 'rspec-rails'
   gem 'selenium-webdriver'
 end
@@ -52,6 +56,7 @@ group :development do
   # background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'rubocop', '~> 0.49'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
