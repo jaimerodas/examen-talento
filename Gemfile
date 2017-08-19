@@ -42,12 +42,13 @@ group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '~> 2.13'
-  gem 'webmock', '~> 3'
   gem 'rspec-rails'
+  gem 'webmock', '~> 3'
   gem 'selenium-webdriver'
 end
 
 group :development do
+  gem 'rubocop', '~> 0.49'
   # Access an IRB console on exception pages or by using <%= console %>
   # anywhere in the code.
   gem 'listen', '>= 3.0.5', '< 3.2'
@@ -56,8 +57,8 @@ group :development do
   # background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
-  gem 'rubocop', '~> 0.49'
+
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
+gem 'tzinfo-data', platforms: %i(mingw mswin x64_mingw jruby)
