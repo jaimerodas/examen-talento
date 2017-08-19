@@ -1,5 +1,7 @@
 # frozen_string_literal: true
+
 require 'rest-client'
+require_relative 'recruiterbox/base'
 require_relative 'recruiterbox/openings'
 require_relative 'recruiterbox/candidates'
 # Module for interacting with the Recruiterbox API

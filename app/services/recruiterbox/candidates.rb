@@ -2,32 +2,11 @@
 
 module Recruiterbox
   # All of the methods that target candidates are in this class
-  class Candidates
+  class Candidates < Base
     require 'rest-client'
     require 'json'
 
     class << self
-      # Returns all candidates that have the specified (optional) parameters
-      def where(params = {})
-        response = RestClient::Request.execute(
-          method: :get,
-          url: url,
-          user: Recruiterbox.config.api_key,
-          headers: { params: params }
-        )
-        JSON.parse(response.body)['objects']
-      end
-
-      # Returns a single, full candidate
-      def find(id)
-        response = RestClient::Request.execute(
-          method: :get,
-          url: url + '/' + id.to_s,
-          user: Recruiterbox.config.api_key
-        )
-        JSON.parse(response.body)
-      end
-
       # Updates data of a single candidate
       def update(id, params = {})
         response = RestClient::Request.execute(
