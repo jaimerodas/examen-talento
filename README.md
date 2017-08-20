@@ -1,4 +1,5 @@
 # Exámenes de Talento
+[![CircleCI](https://circleci.com/gh/jaimerodas/examen-talento/tree/master.svg?style=svg)](https://circleci.com/gh/jaimerodas/examen-talento/tree/master)
 
 En [@resuelve](https://github.com/resuelve), recibimos muchas personas que pasan por nuestro proceso de reclutamiento. Por ello, es muy importante que podamos filtrar a esas personas de la manera más eficiente. Una de las herramientas que usamos para eso es aplicar un examen de cultura y conocimientos generales. Hay variaciones de este examen para ciertos tipos de vacantes, pero la mayoría comparten preguntas entre sí.
 
