@@ -56,6 +56,9 @@ jobs:
                             --out /tmp/test-results/rspec.xml \
                             --format progress \
                             $(circleci tests glob "spec/**/*_spec.rb" | circleci tests split --split-by=timings)
+      - run:
+          name: report coverage
+          command: bundle exec codeclimate-test-reporter
 
       # collect reports
       - store_test_results:

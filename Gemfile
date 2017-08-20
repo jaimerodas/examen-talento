@@ -60,6 +60,7 @@ group :development do
 end
 
 group :test do
+  gem 'codeclimate-test-reporter'
   gem 'rspec_junit_formatter'
   gem 'simplecov'
 end
