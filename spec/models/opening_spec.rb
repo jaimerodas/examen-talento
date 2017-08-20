@@ -5,6 +5,8 @@ require 'rails_helper'
 describe Opening, type: :model do
   describe 'validations' do
     before(:all) { create(:opening) }
+    after(:all) { Opening.all.destroy_all }
+
     # Presence
     it { is_expected.to validate_presence_of(:name) }
     it { is_expected.to validate_presence_of(:service_id) }

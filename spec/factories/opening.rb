@@ -3,8 +3,8 @@
 FactoryGirl.define do
   factory :opening do
     name 'Vacante de Prueba'
-    service_id 123
-    test_stage_id 123
-    passed_stage_id 124
+    sequence :service_id
+    test_stage_id 1234
+    passed_stage_id 1235
   end
 end
