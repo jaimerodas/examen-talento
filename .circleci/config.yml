@@ -36,8 +36,9 @@ jobs:
           command: |
             bundle install --jobs=4 --retry=3 --path vendor/bundle
       - run: sudo apt install postgresql-client
-      - run: rm config/database.yml
-      - run: mv config/database.ci.yml config/database.yml
+      - run:
+          name: configure database
+          command: mv -f config/database.ci.yml config/database.yml
       - save_cache:
           paths:
             - ./venv
