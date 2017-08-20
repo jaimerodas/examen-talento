@@ -61,7 +61,11 @@ end
 
 group :test do
   gem 'codeclimate-test-reporter'
+  gem 'factory_girl_rails'
   gem 'rspec_junit_formatter'
+  gem 'shoulda-matchers',
+      git: 'https://github.com/thoughtbot/shoulda-matchers.git',
+      branch: 'rails-5'
   gem 'simplecov'
 end
 
