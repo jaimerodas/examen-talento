@@ -1,0 +1,18 @@
+# PostgreSQL. Versions 9.1 and up are supported.
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+development:
+  <<: *default
+  database: examen-talento_development
+test:
+  <<: *default
+  database: circle-test_test
+  host: 127.0.0.1
+  user: root
+production:
+  <<: *default
+  database: examen-talento_production
+  username: examen-talento
+  password: <%= ENV['EXAMEN-TALENTO_DATABASE_PASSWORD'] %>
