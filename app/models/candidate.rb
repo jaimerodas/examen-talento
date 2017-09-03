@@ -2,7 +2,7 @@
 
 # A candidate applying for an opening
 class Candidate < ApplicationRecord
-  belongs_to :opening
+  belongs_to :opening, optional: true
 
   validates_presence_of :email, :service_id, :first_name, :last_name
   validates_uniqueness_of :email, :service_id
