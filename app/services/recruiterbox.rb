@@ -20,7 +20,7 @@ module Recruiterbox
     attr_accessor :api_key, :url
 
     def initialize
-      @url = 'https://api.recruiterbox.com/v2/'
+      @url = 'https://api.recruiterbox.com/v2'
     end
   end
 end
