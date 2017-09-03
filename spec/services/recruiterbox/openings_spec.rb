@@ -22,7 +22,8 @@ describe Recruiterbox::Openings do
     it 'returns a single opening' do
       expect(opening).to be_a Hash
       expect(opening['id']).to eq 202_268
-      expect(opening.keys).to include 'id', 'title', 'description'
+      expect(opening.keys).to include 'id', 'title', 'description', 'stages'
+      expect(opening['stages']).to be_an Array
     end
   end
 end

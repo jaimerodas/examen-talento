@@ -10,7 +10,7 @@ RSpec.configure do |config|
       :get, 'https://api.recruiterbox.com/v2/openings?tags=Tiene%20Examen'
     ).with(headers: { 'Accept' => '*/*' }).to_return(
       status: 200,
-      body: { objects: [{ id: 1, title: 'a', description: 'a' }] }.to_json,
+      body: { objects: [{ id: 202_268, title: 'a', description: 'a' }] }.to_json,
       headers: {}
     )
 
@@ -18,7 +18,12 @@ RSpec.configure do |config|
       :get, 'https://api.recruiterbox.com/v2/openings/202268'
     ).with(headers: { 'Accept' => '*/*' }).to_return(
       status: 200,
-      body: { id: 202_268, title: 'a', description: 'a' }.to_json,
+      body: { id: 202_268, title: 'a', description: 'a', stages: [
+        { position: 0, id: 1_947_575, name: 'Revisión candidato' },
+        { position: 1, id: 1_947_576, name: 'Examen' },
+        { position: 4, id: 1_947_579, name: 'Sin Tocar' },
+        { position: 3, id: 1_947_582, name: 'Examen Aprobado' }
+      ] }.to_json,
       headers: {}
     )
 
