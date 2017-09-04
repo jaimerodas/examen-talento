@@ -4,7 +4,7 @@ class CreateCandidates < ActiveRecord::Migration[5.1]
       t.string :email, null: false
       t.string :first_name
       t.string :last_name
-      t.integer :service_id, null: false
+      t.bigint :service_id, null: false
       t.references :opening, foreign_key: true
 
       t.timestamps
