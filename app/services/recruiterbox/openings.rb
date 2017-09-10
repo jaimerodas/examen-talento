@@ -11,7 +11,7 @@ module Recruiterbox
 
       # Returns the openings url
       def url
-        Recruiterbox.config.url + '/openings'
+        super + '/openings'
       end
     end
   end

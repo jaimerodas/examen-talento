@@ -31,7 +31,9 @@ module Recruiterbox
       private
 
       # Returns the candidates url
-      def url; end
+      def url
+        Recruiterbox.config.url
+      end
     end
   end
 end

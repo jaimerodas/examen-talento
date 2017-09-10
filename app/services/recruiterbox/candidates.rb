@@ -23,7 +23,7 @@ module Recruiterbox
 
       # Returns the candidates url
       def url
-        Recruiterbox.config.url + '/candidates'
+        super + '/candidates'
       end
     end
   end
