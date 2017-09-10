@@ -16,4 +16,13 @@ describe Opening, type: :model do
     # Uniqueness
     it { is_expected.to validate_uniqueness_of(:service_id) }
   end
+
+  describe '.active' do
+    subject { create :opening, locked: true }
+
+    it 'returns active openings' do
+      active = Opening.active
+      expect(active.select(&:locked?)).to be_empty
+    end
+  end
 end

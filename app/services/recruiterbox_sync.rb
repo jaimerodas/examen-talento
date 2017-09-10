@@ -18,22 +18,31 @@ class RecruiterboxSync
   end
 
   def current_openings
-    Opening.all
+    Opening.active
   end
 
   def sync_openings(latest)
-    latest.each do |opening|
-      next if Opening.find_by(service_id: opening['id'])
-
-      full_opening_data = Recruiterbox::Openings.find(opening['id'])
-
-      Opening.create(
-        service_id: full_opening_data['id'],
-        name: full_opening_data['title'],
-        test_stage_id: test_stage_id(full_opening_data),
-        passed_stage_id: passed_stage_id(full_opening_data)
-      )
+    active_openings = latest.map do |opening|
+      unless Opening.find_by(service_id: opening['id'])
+        create_opening_from(Recruiterbox::Openings.find(opening['id']))
+      end
+      opening['id']
     end
+
+    deactivate_all_openings_except(active_openings)
+  end
+
+  def create_opening_from(data)
+    Opening.create(
+      service_id: data['id'],
+      name: data['title'],
+      test_stage_id: test_stage_id(data),
+      passed_stage_id: passed_stage_id(data)
+    )
+  end
+
+  def deactivate_all_openings_except(active_ids)
+    Opening.where.not(service_id: active_ids).update_all(locked: true)
   end
 
   def sync_candidates
