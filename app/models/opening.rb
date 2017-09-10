@@ -2,6 +2,7 @@
 
 # An opening in the company
 class Opening < ApplicationRecord
+  belongs_to :exam, optional: true
   has_many :candidates, dependent: :nullify
 
   validates_presence_of :name, :service_id, :test_stage_id, :passed_stage_id
