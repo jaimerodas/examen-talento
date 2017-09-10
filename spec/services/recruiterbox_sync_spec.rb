@@ -1,10 +1,14 @@
 # frozen_string_literal: true
 
-require 'rails_helper'
 require 'recruiterbox_helper'
+require 'rails_helper'
 
 describe RecruiterboxSync do
   describe '.call' do
+    before(:all) do
+      Recruiterbox.configure { |config| config.api_key = 'TEST_API_KEY' }
+    end
+
     after(:each) do
       Opening.all.destroy_all
       Candidate.all.destroy_all
