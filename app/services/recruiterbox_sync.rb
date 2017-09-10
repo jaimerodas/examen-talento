@@ -39,7 +39,9 @@ class RecruiterboxSync
   def sync_candidates
     current_openings.each do |opening|
       prospects = Recruiterbox::Candidates.where(
-        opening_id: opening.service_id, stage_id: opening.test_stage_id
+        opening_id: opening.service_id,
+        stage_id: opening.test_stage_id,
+        state: 'in_process'
       )
       prospects.each { |prospect| find_and_update_candidate(prospect, opening) }
     end

@@ -28,7 +28,9 @@ RSpec.configure do |config|
     )
 
     stub_request(
-      :get, 'https://api.recruiterbox.com/v2/candidates?opening_id=202268&stage_id=1947576'
+      :get,
+      'https://api.recruiterbox.com/v2/candidates?opening_id=202268' \
+      '&stage_id=1947576&state=in_process'
     ).with(headers: { 'Accept' => '*/*' }).to_return(
       status: 200,
       body: { objects: [{

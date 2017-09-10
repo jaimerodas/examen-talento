@@ -9,7 +9,9 @@ describe Recruiterbox::Candidates do
 
   describe '#where' do
     let(:candidates) do
-      described_class.where(opening_id: 202_268, stage_id: 1_947_576)
+      described_class.where(
+        opening_id: 202_268, stage_id: 1_947_576, state: 'in_process'
+      )
     end
 
     it 'returns an array of candidates' do
