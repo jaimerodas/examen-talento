@@ -4,6 +4,7 @@
 # opening
 class Exam < ApplicationRecord
   has_many :openings
+  has_many :exam_sections, through: :exam_sections_exams
 
   validate :no_changes_if_locked, on: :update
   validates_presence_of :title, :passing_grade
