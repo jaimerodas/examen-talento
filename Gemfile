@@ -64,7 +64,7 @@ group :test do
   gem 'factory_girl_rails'
   gem 'rspec_junit_formatter'
   gem 'shoulda-matchers',
-      git: 'https://github.com/thoughtbot/shoulda-matchers.git',
+      github: 'thoughtbot/shoulda-matchers',
       branch: 'rails-5'
   gem 'simplecov'
 end
