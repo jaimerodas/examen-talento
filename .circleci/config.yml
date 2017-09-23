@@ -11,6 +11,9 @@ jobs:
         environment:
           - RAILS_ENV: test
           - RACK_ENV: test
+          - GOOGLE_AUTH_DOMAINS: resuelve.mx
+          - GOOGLE_CLIENT_ID: 123
+          - GOOGLE_CLIENT_SECRET: 123
       # Specify service dependencies here if necessary
       # CircleCI maintains a library of pre-built images
       # documented at https://circleci.com/docs/2.0/circleci-images/
