@@ -65,6 +65,7 @@ end
 group :test do
   gem 'codeclimate-test-reporter'
   gem 'factory_girl_rails'
+  gem 'rails-controller-testing'
   gem 'rspec_junit_formatter'
   gem 'shoulda-matchers',
       github: 'thoughtbot/shoulda-matchers',
