@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170910194254) do
+ActiveRecord::Schema.define(version: 20170923025120) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -111,6 +111,19 @@ ActiveRecord::Schema.define(version: 20170910194254) do
     t.datetime "finished_at"
     t.index ["exam_result_id"], name: "index_section_results_on_exam_result_id"
     t.index ["exam_section_id"], name: "index_section_results_on_exam_section_id"
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "uid", null: false
+    t.string "first_name", null: false
+    t.string "last_name"
+    t.string "email", null: false
+    t.boolean "admin", default: false
+    t.boolean "active", default: true
+    t.datetime "last_sign_in_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["uid"], name: "index_users_on_uid", unique: true
   end
 
   add_foreign_key "candidates", "openings"
