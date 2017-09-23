@@ -2,6 +2,8 @@
 
 # How you log into the system
 class LoginsController < ApplicationController
+  layout 'session'
+
   def show
     redirect_to root_path if current_user
   end
