@@ -4,7 +4,8 @@
 module ApplicationHelper
   def timed_greeting
     case Time.now.hour
-    when 0..6 then 'Buenas madrugadas'
+    when 0..3 then 'Ya vete a dormir'
+    when 4..6 then 'Buenas madrugadas'
     when 7..11 then 'Buenos días'
     when 12..19 then 'Buenas tardes'
     else 'Buenas noches'

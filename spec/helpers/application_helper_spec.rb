@@ -4,8 +4,13 @@ require 'rails_helper'
 
 describe ApplicationHelper do
   describe '#timed_greeting' do
+    it 'says go to sleep' do
+      allow(Time).to receive(:now).and_return(OpenStruct.new(hour: 1))
+      expect(timed_greeting).to eq('Ya vete a dormir')
+    end
+
     it 'says good early morning' do
-      allow(Time).to receive(:now).and_return(OpenStruct.new(hour: 3))
+      allow(Time).to receive(:now).and_return(OpenStruct.new(hour: 5))
       expect(timed_greeting).to eq('Buenas madrugadas')
     end
 
