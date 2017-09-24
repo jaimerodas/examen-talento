@@ -12,11 +12,11 @@ body {
 }
 
 header {
-  padding: 1em;
+  padding: 0 1em 1em;
 
   .main-title {
     font-size: 2em;
-    font-weight: 900;
+    font-weight: bold;
     color: #555;
     line-height: 1.2;
     border-bottom-width: 0.10546875em;
@@ -56,6 +56,10 @@ header {
       border-bottom-width: 0.25em;
     }
   }
+
+  hr {
+    display: none;
+  }
 }
 
 @media screen and (min-width: 58em) {
@@ -63,13 +67,11 @@ header {
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
-    border-bottom: 0.1875em solid #eee;
-    padding: 0.8125em 0 0;
+    padding: 0;
     margin: 0 1em;
 
     & > a {
       position: relative;
-      bottom: -0.09375em;
     }
 
     nav {
@@ -77,8 +79,19 @@ header {
       a {
         margin-left: 1em;
         position: relative;
-        bottom: -0.125em;
       }
+    }
+
+    hr {
+      box-sizing: border-box;
+      height: 0.1875em;
+      padding: 0;
+      margin: 0;
+      width: calc(100% - 2em);
+      background-color: #eee;
+      display: block;
+      position: absolute;
+      border: none;
     }
   }
 }
