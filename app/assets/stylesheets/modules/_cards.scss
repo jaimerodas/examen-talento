@@ -7,18 +7,21 @@
     padding: 1em;
     border-radius: 0.5em;
     border: 0.125em solid #eee;
+    box-shadow: 0 0.25em 0.5em rgba(0,0,0,0);
     transform: scale3d(1,1,1);
     transition: 0.2s ease all;
 
     &:hover {
       transform: scale3d(1.05, 1.05, 1);
-      border-color: #ccc;
+      border-color: #ddd;
+      box-shadow: 0 0.25em 0.5em rgba(0,0,0,0.1);
     }
 
     .title {
       display: block;
       font-weight: bold;
       font-size: 1.5em;
+      line-height: 1.2;
     }
 
     .detail {
