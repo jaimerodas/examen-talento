@@ -6,4 +6,6 @@ Rails.application.routes.draw do
 
   resource :login, only: [:show]
   resource :logout, only: [:show]
+
+  resources :users, only: [:index]
 end

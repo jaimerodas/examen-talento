@@ -1,6 +1,5 @@
-<main>
-  <h1><%= timed_greeting %>, <%= current_user.first_name %></h1>
-
+<header>
+  <%= link_to "Exámenes Talento", root_path, class: 'main-title' %>
   <nav>
     <%= link_to "Resultados", '#' %>
     <%= link_to "Vacantes", '#' %>
@@ -8,4 +7,4 @@
     <%= link_to "Usuarios", users_path %>
     <%= link_to "Salir", logout_path %>
   </nav>
-</main>
+</header>
