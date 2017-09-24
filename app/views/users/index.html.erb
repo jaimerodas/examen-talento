@@ -1,5 +1,5 @@
 <main class="small">
-  <h1><%= @users.count %> <%= t :users, count: @users.count %></h1>
+  <h1><%= t :users, scope: [:titles], count: @users.count %></h1>
 
   <div class="cards">
     <%= render @users %>

@@ -30,10 +30,11 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 es:
-  users:
-    zero: usuarios
-    one: usuario
-    other: usuarios
+  titles:
+    users:
+      zero: No hay usuarios
+      one: 1 Usuario
+      other: '%{count} Usuarios'
   datetime:
     distance_in_words:
       about_x_hours:
