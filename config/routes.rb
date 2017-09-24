@@ -8,4 +8,5 @@ Rails.application.routes.draw do
   resource :logout, only: [:show]
 
   resources :users, only: [:index]
+  resources :exams
 end

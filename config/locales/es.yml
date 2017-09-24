@@ -35,6 +35,10 @@ es:
       zero: No hay usuarios
       one: 1 Usuario
       other: '%{count} Usuarios'
+    exams:
+      zero: No hay exámenes
+      one: 1 Examen
+      other: '%{count} Exámenes'
   datetime:
     distance_in_words:
       about_x_hours:
