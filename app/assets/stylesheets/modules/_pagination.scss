@@ -1,0 +1,36 @@
+.pagination {
+  margin: 1em 0;
+  text-align: right;
+
+  a {
+    display: inline-block;
+    margin-left: 0.5em;
+    padding: 0.5em 0.75em;
+    // color: #4679c7;
+    color: #000;
+    background-color: #eee;
+    border-radius: 0.25em;
+
+    text-decoration: none;
+
+    box-shadow: 0 0.125em 0.25em #fff;
+    transform: translate3d(0,0,0);
+    transition: 0.2s ease all;
+
+    &:hover {
+      transform: translate3d(0, -0.125em, 0);
+      box-shadow: 0 0.125em 0.25em #ccc;
+    }
+
+    &:active {
+      transform: translate3d(0, 0.0625em, 0);
+      box-shadow: 0 0.125em 0.25em #fff;
+    }
+  }
+
+  .current {
+    display: inline-block;
+    padding: 0.5em 0.75em;
+    margin-left: 0.5em;
+  }
+}

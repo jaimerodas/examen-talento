@@ -1,7 +1,9 @@
 <main class="small">
-  <h1><%= t :users, scope: [:titles], count: @users.count %></h1>
+  <h1><%= t :users, scope: [:titles], count: @users.total_count %></h1>
 
   <div class="cards">
     <%= render @users %>
   </div>
+
+  <%= paginate @users %>
 </main>

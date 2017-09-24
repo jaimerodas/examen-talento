@@ -78,3 +78,9 @@ es:
       x_seconds:
         one: 1 segundo
         other: "%{count} segundos"
+  views:
+    pagination:
+      first: inicio
+      previous: anterior
+      next: siguiente
+      last: último
