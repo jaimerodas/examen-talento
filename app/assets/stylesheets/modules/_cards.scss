@@ -1,0 +1,49 @@
+.cards {
+  display: grid;
+  grid-gap: 1em;
+
+  .card {
+    box-sizing: border-box;
+    padding: 1em;
+    border-radius: 0.5em;
+    border: 0.125em solid #eee;
+    transform: scale3d(1,1,1);
+    transition: 0.2s ease all;
+
+    &:hover {
+      transform: scale3d(1.05, 1.05, 1);
+      border-color: #ccc;
+    }
+
+    .title {
+      display: block;
+      font-weight: bold;
+      font-size: 1.5em;
+    }
+
+    .detail {
+      display: block;
+      font-size: 0.75em;
+      color: #888;
+    }
+  }
+}
+
+@media screen and (min-width: 36em) {
+  .cards {
+    grid-template-columns: repeat(2, calc((100% - 1em)/2));
+    grid-auto-flow: row;
+  }
+}
+
+@media screen and (min-width: 48em) {
+  .cards {
+    grid-template-columns: repeat(3, calc((100% - 2em)/3));
+  }
+}
+
+@media screen and (min-width: 72em) {
+  .cards {
+    grid-template-columns: repeat(4, calc((100% - 3em)/4));
+  }
+}

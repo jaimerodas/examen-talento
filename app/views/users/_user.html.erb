@@ -1,4 +1,5 @@
-<article class="user">
-  <span><%= user.name %></span>
+<article class="card">
+  <span class="title"><%= user.name %></span>
   <span><%= user.email %></span>
+  <span class="detail">Último login: hace <%= time_ago_in_words user.last_sign_in_at %></span>
 </article>
