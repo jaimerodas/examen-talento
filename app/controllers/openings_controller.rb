@@ -4,7 +4,9 @@
 class OpeningsController < ApplicationController
   before_action :logged_in_user?
 
-  def index; end
+  def index
+    @openings = Opening.all.page(params[:page])
+  end
 
   def sync
     RecruiterboxSync.call

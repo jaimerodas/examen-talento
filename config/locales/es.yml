@@ -39,6 +39,10 @@ es:
       zero: No hay exámenes
       one: 1 Examen
       other: '%{count} Exámenes'
+    openings:
+      zero: No hay vacantes
+      one: 1 Vacante
+      other: '%{count} Vacantes'
   datetime:
     distance_in_words:
       about_x_hours:

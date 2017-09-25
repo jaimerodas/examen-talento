@@ -1,4 +1,10 @@
 <main>
-  <h1>Vacantes</h1>
+  <h1><%= t :openings, scope: [:titles], count: @openings.total_count %></h1>
   <%= button_to 'Sincronizar con Recruiterbox', sync_openings_path %>
+
+  <div class="cards">
+    <%= render @openings %>
+  </div>
+
+  <%= paginate @openings %>
 </main>

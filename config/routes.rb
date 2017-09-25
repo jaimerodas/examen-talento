@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   resource :logout, only: [:show]
 
   resources :exams
-  resources :openings, only: [:index] do
+  resources :openings, only: [:index, :show] do
     post 'sync', on: :collection
   end
   resources :users, only: [:index]
