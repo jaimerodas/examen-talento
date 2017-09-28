@@ -7,4 +7,8 @@ class ExamsController < ApplicationController
   def index
     @exams = Exam.all
   end
+
+  def new
+    @exam = Exam.new
+  end
 end

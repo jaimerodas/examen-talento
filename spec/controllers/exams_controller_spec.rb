@@ -12,4 +12,11 @@ describe ExamsController do
       expect(subject).to render_template :index
     end
   end
+
+  describe '#new' do
+    subject { get :new }
+    it 'renders the template' do
+      expect(subject).to render_template :new
+    end
+  end
 end

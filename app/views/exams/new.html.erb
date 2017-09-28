@@ -1,0 +1,12 @@
+<main>
+  <h1>Crear Examen</h1>
+
+  <%= form_for @exam do |f| %>
+    <%= render "shared/errors", object: @exam %>
+
+    <div class="field">
+      <%= f.label :title %>
+      <%= f.text_field :title %>
+    </div>
+  <% end %>
+</main>
