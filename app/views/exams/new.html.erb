@@ -8,5 +8,12 @@
       <%= f.label :title %>
       <%= f.text_field :title %>
     </div>
+
+    <div class="field">
+      <%= f.label :passing_grade %>
+      <%= f.number_field :passing_grade, step: 1, min: 0, max: 100 %>
+    </div>
+
+    <%= f.button %>
   <% end %>
 </main>

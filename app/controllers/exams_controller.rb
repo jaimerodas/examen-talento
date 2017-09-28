@@ -11,4 +11,20 @@ class ExamsController < ApplicationController
   def new
     @exam = Exam.new
   end
+
+  def create
+    @exam = Exam.new(exam_params)
+
+    if @exam.save
+      redirect_to exams_path
+    else
+      render :new
+    end
+  end
+
+  private
+
+  def exam_params
+    params.require(:exam).permit(:title, :passing_grade)
+  end
 end

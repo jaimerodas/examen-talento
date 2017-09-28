@@ -88,3 +88,17 @@ es:
       previous: anterior
       next: siguiente
       last: último
+  helpers:
+    submit:
+      create: 'Crear %{model}'
+      update: 'Actualizar %{model}'
+      submit: 'Guardar %{model}'
+  activerecord:
+    models:
+      exam:
+        one: Examen
+        other: Exámenes
+    attributes:
+      exam:
+        title: Título
+        passing_grade: Calificación Mínima Aprobatoria
