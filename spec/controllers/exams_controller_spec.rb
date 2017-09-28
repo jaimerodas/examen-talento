@@ -22,8 +22,7 @@ describe ExamsController do
 
   describe '#create' do
     context 'with a correct params hash' do
-      let(:exam) { attributes_for :exam }
-      subject { post :create, params: { exam: exam } }
+      subject { post :create, params: { exam: attributes_for(:exam) } }
       it 'saves the exam' do
         expect { subject }.to change { Exam.all.count }.by(1)
       end
@@ -34,8 +33,7 @@ describe ExamsController do
     end
 
     context 'with an incorrect params hash' do
-      let(:exam) { { title: 'Prueba' } }
-      subject { post :create, params: { exam: exam } }
+      subject { post :create, params: { exam: { title: 'Prueba' } } }
       it 'does not save the exam' do
         expect { subject }.not_to(change { Exam.all.count })
       end
