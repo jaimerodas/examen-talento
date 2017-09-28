@@ -67,7 +67,7 @@ class RecruiterboxSync
   end
 
   def test_stage_id(data)
-    find_stage_id data, 'Examen'
+    find_stage_id data, 'Examen General'
   end
 
   def passed_stage_id(data)

@@ -20,7 +20,7 @@ RSpec.configure do |config|
       status: 200,
       body: { id: 202_268, title: 'a', description: 'a', stages: [
         { position: 0, id: 1_947_575, name: 'Revisión candidato' },
-        { position: 1, id: 1_947_576, name: 'Examen' },
+        { position: 1, id: 1_947_576, name: 'Examen General' },
         { position: 4, id: 1_947_579, name: 'Sin Tocar' },
         { position: 3, id: 1_947_582, name: 'Examen Aprobado' }
       ] }.to_json,
