@@ -5,7 +5,7 @@ class ExamsController < ApplicationController
   before_action :logged_in_user?
 
   def index
-    @exams = Exam.all
+    @exams = Exam.all.page(params[:page])
   end
 
   def new
