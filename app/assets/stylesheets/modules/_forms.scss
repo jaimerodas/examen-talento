@@ -1,0 +1,101 @@
+form {
+  margin: 0 auto 1em;
+  &.narrow {
+    max-width: 30em;
+  }
+
+  label {
+    font-size: 0.875em;
+    font-weight: 900;
+    line-height: 1.2;
+  }
+
+  input[type=text],
+  input[type=number] {
+    box-sizing: border-box;
+    width: 100%;
+    display: block;
+    padding: 0.5em 0 0.5em;
+    margin: 0;
+    outline: none;
+    border: none;
+    border-bottom: 0.25rem solid #eee;
+
+    transition: 0.2s ease border-bottom-color;
+
+    font-family: inherit;
+    font-size: inherit;
+
+    &.big {
+      font-size: 1.5em;
+    }
+
+    &:focus {
+      border-bottom-color: $highlight-color;
+    }
+  }
+
+  .field {
+    margin-bottom: 2em;
+  }
+
+  .field_with_errors {
+    input[type=text],
+    input[type=number] {
+      border-bottom-color: $warning-color;
+    }
+  }
+
+  .help {
+    font-size: 0.75em;
+    font-style: italic;
+    font-weight: bold;
+    color: #666;
+
+    line-height: 1.2;
+  }
+
+  button,
+  [role=button] {
+    display: block;
+    padding: 1em;
+    border: none;
+    border-radius: 0.5em;
+    width: 100%;
+    background-color: $highlight-color;
+
+    color: white;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: bold;
+
+    transition: 0.2s ease all;
+    transform: translate3d(0,0,0);
+    box-shadow: 0 0.25em 0.5em rgba(0,0,0,0);
+
+    cursor: pointer;
+
+    &:hover {
+      transform: translate3d(0,-.1em,0);
+      box-shadow: 0 0.25em 0.5em rgba(0,0,0,0.2);
+    }
+
+    &:active {
+      transform: translate3d(0,0,0);
+      box-shadow: 0 0 0.5em rgba(0,0,0,0.1);
+    }
+  }
+
+  .actions {
+    text-align: center;
+  }
+
+  .cancel {
+    display: inline-block;
+    padding: 0.5em;
+    margin-top: 1em;
+
+    color: $highlight-color;
+    font-weight: bold;
+  }
+}

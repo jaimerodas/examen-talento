@@ -1,19 +1,22 @@
 <main>
-  <h1>Crear Examen</h1>
-
-  <%= form_for @exam do |f| %>
+  <%= form_for @exam, html: { class: 'narrow' } do |f| %>
+    <h1>Nuevo Examen</h1>
     <%= render "shared/errors", object: @exam %>
 
     <div class="field">
       <%= f.label :title %>
-      <%= f.text_field :title %>
+      <%= f.text_field :title, placeholder: 'Examen rete harto difícil', class: 'big' %>
     </div>
 
     <div class="field">
       <%= f.label :passing_grade %>
       <%= f.number_field :passing_grade, step: 1, min: 0, max: 100 %>
+      <span class="help">Debe ser un número entre 0 y 100</span>
     </div>
 
-    <%= f.button %>
+    <section class="actions">
+      <%= f.button %>
+      <%= link_to "Siempre no", exams_path, class: 'cancel' %>
+    </section>
   <% end %>
 </main>
