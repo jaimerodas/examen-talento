@@ -1,3 +1,5 @@
+@import "variables";
+
 html, body {
   height: 100%;
   margin: 0;
@@ -37,7 +39,7 @@ a {
   padding: 0.75em 0.5em;
   margin: 0 0 1em;
   border-radius: 0.5em;
-  background-color: #4679c7;
+  background-color: $highlight-color;
 
   color: #fff;
   text-decoration: none;

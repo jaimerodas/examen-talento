@@ -29,7 +29,7 @@ header {
     }
 
     &:active {
-      border-bottom-color: #4679c7;
+      border-bottom-color: $highlight-color;
       padding-bottom: 0.10546875em;
       border-bottom-width: 0.2109375em;
     }
@@ -38,7 +38,7 @@ header {
   a {
     font-size: 1.25em;
     text-decoration: none;
-    color: #4679c7;
+    color: $highlight-color;
 
     display: block;
     padding: 0.25em 0;
@@ -51,7 +51,7 @@ header {
     }
 
     &:active {
-      border-bottom-color: #4679c7;
+      border-bottom-color: $highlight-color;
       padding-bottom: 0.125em;
       border-bottom-width: 0.25em;
     }

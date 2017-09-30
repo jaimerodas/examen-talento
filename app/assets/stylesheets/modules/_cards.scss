@@ -42,7 +42,7 @@
     }
 
     &:active {
-      border-color: #4679c7;
+      border-color: $highlight-color;
       transform: scale3d(1, 1, 1);
     }
   }

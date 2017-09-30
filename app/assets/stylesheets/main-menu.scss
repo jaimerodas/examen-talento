@@ -1,3 +1,5 @@
+@import "variables";
+
 html, body {
   height: 100%;
   margin: 0;
@@ -31,7 +33,7 @@ a {
   padding: 0.25em 0;
   border-bottom: 0.125em solid #eee;
 
-  color: #4679c7;
+  color: $highlight-color;
   font-size: 1.5em;
   text-decoration: none;
 
@@ -45,7 +47,7 @@ a {
   }
 
   &:active {
-    border-bottom-color: #4679c7;
+    border-bottom-color: $highlight-color;
     padding-bottom: 0.125em;
     border-bottom-width: 0.25em;
   }
