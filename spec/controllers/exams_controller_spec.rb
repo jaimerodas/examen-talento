@@ -11,12 +11,22 @@ describe ExamsController do
     it 'renders the template' do
       expect(subject).to render_template :index
     end
+
+    it 'assigns @exams' do
+      subject
+      expect(assigns(:exams)).to be_an(ActiveRecord::Relation)
+    end
   end
 
   describe '#new' do
     subject { get :new }
     it 'renders the template' do
       expect(subject).to render_template :new
+    end
+
+    it 'assigns @exam' do
+      subject
+      expect(assigns(:exam)).to be_a_new(Exam)
     end
   end
 
@@ -41,6 +51,20 @@ describe ExamsController do
       it 'rerenders the form' do
         expect(subject).to render_template :new
       end
+    end
+  end
+
+  describe '#show' do
+    let(:exam) { create :exam }
+    subject { get :show, params: { id: exam.id } }
+
+    it 'renders the template' do
+      expect(subject).to render_template :show
+    end
+
+    it 'assigns @exam' do
+      subject
+      expect(assigns(:exam)).to eq(exam)
     end
   end
 end

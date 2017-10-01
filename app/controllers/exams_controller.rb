@@ -22,6 +22,10 @@ class ExamsController < ApplicationController
     end
   end
 
+  def show
+    @exam = Exam.find(params[:id])
+  end
+
   private
 
   def exam_params
