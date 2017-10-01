@@ -1,0 +1,16 @@
+.errors {
+  border: 0.25em solid $warning-color;
+  border-radius: 0.5em;
+  padding: 1em;
+  margin: 0 0 1em;
+
+  h2 {
+    font-size: 1.25em;
+    margin: 0 0 0.5em;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0 0 0 1.5em;
+  }
+}
