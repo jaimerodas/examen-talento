@@ -38,7 +38,7 @@ describe ExamsController do
       end
 
       it 'redirects to index' do
-        expect(subject).to redirect_to(exams_path)
+        expect(subject).to redirect_to(exam_path(assigns(:exam)))
       end
     end
 

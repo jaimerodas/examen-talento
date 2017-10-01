@@ -16,7 +16,7 @@ class ExamsController < ApplicationController
     @exam = Exam.new(exam_params)
 
     if @exam.save
-      redirect_to exams_path
+      redirect_to @exam
     else
       render :new
     end
